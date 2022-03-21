@@ -1,13 +1,13 @@
 from socket import timeout
 from telnetlib import XDISPLOC
-from cv2 import threshold
+#rom cv2 import threshold
 import numpy as np
 import pandas as pd
 import serial
 
 if __name__ == '__main__':
     # assume you saved your recordings into a "data" folder
-    A = pd.read_csv("testA.csv")
+    A = pd.read_csv("testA.csv")    
     B = pd.read_csv("testB.csv")
     #C = pd.read_csv("testC.csv")
     #D = pd.read_csv("testD.csv")
