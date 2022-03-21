@@ -100,7 +100,7 @@ if __name__ == '__main__':
     clf = RandomForestClassifier().fit(X,Label)
 
     try:
-        arduino = serial.Serial("COM4", timeout= 1.1)
+        arduino = serial.Serial("COM3", timeout= 1.1)
     except:
         print("Error")
     

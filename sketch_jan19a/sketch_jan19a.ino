@@ -1,4 +1,4 @@
-int f0,f1,f2,f3,f4;
+  int f0,f1,f2,f3,f4;
 bool isRecording = false;
 void setup() {
   // put your setup code here, to run once:
