@@ -11,25 +11,25 @@ Serial.begin(9600);
 }
 
 void loop() {
-  if (Serial.available()) {
-    String command = Serial.readStringUntil('\n');
-
-    Serial.print("Command: ");
-    Serial.println(command);
-
-    // if user sent "record", start recording
-    if (command.equals("record")) {
-      Serial.println("Start recording...");
-      isRecording = true;
-    }
-    // otherwise stop recording
-    else {
-      Serial.println("Stop recording...");
-      isRecording = false;
-    }
-  }
-  if (!isRecording){
-    return;}
+//  if (Serial.available()) {
+//    String command = Serial.readStringUntil('\n');
+//
+//    Serial.print("Command: ");
+//    Serial.println(command);
+//
+//    // if user sent "record", start recording
+//    if (command.equals("record")) {
+//      Serial.println("Start recording...");
+//      isRecording = true;
+//    }
+//    // otherwise stop recording
+//    else {
+//      Serial.println("Stop recording...");
+//      isRecording = false;
+//    }
+//  }
+//  if (!isRecording){
+//    return;}
    
 f0 = analogRead(A1);
 f1 =analogRead(A2);

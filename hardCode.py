@@ -12,16 +12,24 @@ if __name__ == '__main__':
     #C = pd.read_csv("testC.csv")
     #D = pd.read_csv("testD.csv")
 
-    thres = 10
+    thres = 50
     aArr = (A.to_numpy()).mean(axis=0)
     bArr = (B.to_numpy()).mean(axis=0)
     #C.to_numpy()
     #D.to_numpy()
+    #np.greater(arr, (aArr-thres))
+    # def predict(arr):
+    #     if (arr > aArr-thres and arr < aArr+thres):
+    #         print('A')
+    #     elif (arr> bArr-thres and arr < bArr+thres):
+    #         print('B')
+    #     else:
+    #         print("undefined")
 
     def predict(arr):
-        if (arr > aArr-thres and arr < aArr+thres):
+        if (all(np.greater(arr, (aArr-thres))) and all(np.less(arr, (aArr+thres)))):
             print('A')
-        elif (arr> bArr-thres and arr < bArr+thres):
+        elif (all(np.greater(arr, (bArr-thres))) and all(np.less(arr, (bArr+thres)))):
             print('B')
         else:
             print("undefined")
@@ -39,5 +47,6 @@ if __name__ == '__main__':
             arr = list(map(float,cleandata.split(',')))
             predict(arr)
         except:
+            print('Error')
             continue
     
