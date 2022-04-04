@@ -25,13 +25,13 @@ if __name__ == '__main__':
     P = pd.read_csv("testP.csv")
     Q = pd.read_csv("testQ.csv")
     R = pd.read_csv("testR.csv")
-    # S = pd.read_csv("testS.csv")
-    # T = pd.read_csv("testT.csv")
-    # U = pd.read_csv("testU.csv")
-    # V = pd.read_csv("testV.csv")
-    # W = pd.read_csv("testW.csv")
-    # X = pd.read_csv("testX.csv")
-    # Y = pd.read_csv("testY.csv")
+    S = pd.read_csv("testS.csv")
+    T = pd.read_csv("testT.csv")
+    U = pd.read_csv("testU.csv")
+    V = pd.read_csv("testV.csv")
+    W = pd.read_csv("testW.csv")
+    X = pd.read_csv("testX.csv")
+    Y = pd.read_csv("testY.csv")
     Z = pd.read_csv("testZ.csv")
 
 
@@ -54,13 +54,13 @@ if __name__ == '__main__':
         P.to_numpy(),
         Q.to_numpy(),
         R.to_numpy(),
-        # S.to_numpy(),
-        # T.to_numpy(),
-        # U.to_numpy(),
-        # V.to_numpy(),
-        # W.to_numpy(),
-        # X.to_numpy(),
-        # Y.to_numpy(),
+        S.to_numpy(),
+        T.to_numpy(),
+        U.to_numpy(),
+        V.to_numpy(),
+        W.to_numpy(),
+        X.to_numpy(),
+        Y.to_numpy(),
          Z.to_numpy()
     ])
 
@@ -87,13 +87,13 @@ if __name__ == '__main__':
         15*np.ones(len(P)),
         16*np.ones(len(Q)),
         17*np.ones(len(R)),
-        # 18*np.ones(len(S)),
-        # 19*np.ones(len(T)),
-        # 20*np.ones(len(U)),
-        # 21*np.ones(len(V)),
-        # 22*np.ones(len(W)),
-        # 23*np.ones(len(X)),
-        # 24*np.ones(len(Y)),
+        18*np.ones(len(S)),
+        19*np.ones(len(T)),
+        20*np.ones(len(U)),
+        21*np.ones(len(V)),
+        22*np.ones(len(W)),
+        23*np.ones(len(X)),
+        24*np.ones(len(Y)),
         25*np.ones(len(Z))
     ])
 
