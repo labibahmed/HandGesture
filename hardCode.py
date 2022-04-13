@@ -2,8 +2,9 @@ from socket import timeout
 from telnetlib import XDISPLOC
 #rom cv2 import threshold
 import numpy as np
-import pandas as pd
+import pandas as pd  
 import serial
+
 
 if __name__ == '__main__':
     # assume you saved your recordings into a "data" folder
