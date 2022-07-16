@@ -40,15 +40,15 @@ To make sure all circuitry is correctly placed, you can design and use a PCB, ot
 
 The following is how flexsensors are connected. This way you are able to read the flexsensor values based on the bending of the glove.
 
-<img src="images/flexsensor.PNG" width="150" >
+<img src="images/flexsensor.PNG" width="250" >
 
 The full circuit will look like this.
 
-<img src="images/circuit.PNG" width="300" >
+<img src="images/circuit.PNG" width="450" >
 
 Once attached make sure the arduino code is uploaded. Then make sure all data is being read properly and also sent in the proper syntax. The data should look like this:
 
-<img src="images/dataStream.PNG" width="300" >
+<img src="images/dataStream.PNG" width="450" >
 
 If all is working fine you can proceed to attaching the components to the glove. Using the glove and the portion of the arduino code that is commented, you can start and stop recording data. Use this to record data for any gesture you like or use our premade data. However because of different flexsensors or different glove size, the premade data may not work well with your set of equipment. After recording you may recomment the code. The glove is ready to predict gestures, run the arduino code and then the python code, you should start to see the predicted gesture.
 
@@ -86,17 +86,19 @@ def num2str(i):
 
 The main portion of our code. This deals with creating and training the prediction model. Handles any connection errors or parsing errors. Parses data so that it is compatible with our model and finally prints out the prediction.
 
-<img src="images/main.svg" width="300" >
+<img src="images/main.svg" width="650" >
 
 ---
 
 ## Results
 To compare our results we had a set of hardcoded / brute force approach of predicting the gestures. This was to give the results something to compare to as well as validate why using machine learning is the correct approach when it comes to predicting.
 **Machine Learning**
-<img src="images/cmatrixML.PNG" width="300" >
+
+<img src="images/cmatrixML.PNG" width="650" >
 
 **Brute Force / Hard Code**
-<img src="images/cmatrixHC.PNG" width="300" >
+
+<img src="images/cmatrixHC.PNG" width="650" >
 
 Final thoughts:
 - The results could be better, this was due to poor data for the trained model as well as small quantity of data
