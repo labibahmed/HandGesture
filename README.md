@@ -4,7 +4,7 @@
 
 This is our fourth year computer engineering capstone project from Ryerson / TMU. The goal of the capstone was to implement a hardware + software solution recognize gestures. It was decided to use a combination of arduino and python to create a system that can read sign language and output the correct gesture made. Arduino is responisble for reading the sensors attached to the glove and sending the information to a python script via serial. The python script was to then parse the data and read it as input to a machine learning model, which then predicts the gesture made. The model itself is trained using data collected before hand.
 
-![glove](images/glove)
+![glove](images/glove.png)
 
 ---
 ## Materials Needed
@@ -40,26 +40,26 @@ To make sure all circuitry is correctly placed, you can design and use a PCB, ot
 
 The following is how flexsensors are connected. This way you are able to read the flexsensor values based on the bending of the glove.
 
-<img src"images/flexsensor.png" width="150" \>
+<img src"images/flexsensor.png" width="150" />
 
 The full circuit will look like this.
 
-<img src"images/circuit.png" width="300" \>
+<img src"images/circuit.png" width="300" />
 
 Once attached make sure the arduino code is uploaded. Then make sure all data is being read properly and also sent in the proper syntax. The data should look like this:
 
-<img src"images/dataStream.png" width="300" \>
+<img src"images/dataStream.png" width="300" />
 
 If all is working fine you can proceed to attaching the components to the glove. Using the glove and the portion of the arduino code that is commented, you can start and stop recording data. Use this to record data for any gesture you like or use our premade data. However because of different flexsensors or different glove size, the premade data may not work well with your set of equipment. After recording you may recomment the code. The glove is ready to predict gestures, run the arduino code and then the python code, you should start to see the predicted gesture.
 
 ### Code Explanation - Arduino
 The Arduino code is self explanatory for the  most part. You set up the variables and pins for reading as well as the port for transmission. To record the data for each gesture the following was used:
 
-<img src"images/arduinoRec.svg" width="300" \>
+<img src"images/arduinoRec.svg" width="300" />
 
 To read the flex sensors is simple but reading the gyroscope was done by doing this:
 
-<img src"images/readAG.svg" width="300" \>
+<img src"images/readAG.svg" width="300" />
 
 The following is used to delay the input reading, This also makes the intervals for data reading more concistent
 ```arduino
@@ -70,12 +70,12 @@ delay(100);
 ### Code Explanation - Python
 The data for the machine learning model was set up first. This was done by reading the CSV files as arrays and then merging all the data to a single data array.
 
-<img src"images/readCSV.svg" width="300" \>
-<img src"images/combineSVG.svg" width="300" \>
+<img src"images/readCSV.svg" width="300" />
+<img src"images/combineSVG.svg" width="300" />
 
 Then an array of equal size was created for the labels of each alphabet.
 
-<img src"images/label.svg" width="300" \>
+<img src"images/label.svg" width="300" />
 
 This is a simple function used by our program that converts the numeric label prediction into alphabets for us to read
 ```python
@@ -86,17 +86,17 @@ def num2str(i):
 
 The main portion of our code. This deals with creating and training the prediction model. Handles any connection errors or parsing errors. Parses data so that it is compatible with our model and finally prints out the prediction.
 
-<img src"images/main.svg" width="300" \>
+<img src"images/main.svg" width="300" />
 
 ---
 
 ## Results
 To compare our results we had a set of hardcoded / brute force approach of predicting the gestures. This was to give the results something to compare to as well as validate why using machine learning is the correct approach when it comes to predicting.
 **Machine Learning**
-<img src"images/cmatrixML.png" width="300" \>
+<img src"images/cmatrixML.png" width="300" />
 
 **Brute Force / Hard Code**
-<img src"images/cmatrixHC.png" width="300" \>
+<img src"images/cmatrixHC.png" width="300" />
 
 Final thoughts:
 - The results could be better, this was due to poor data for the trained model as well as small quantity of data
